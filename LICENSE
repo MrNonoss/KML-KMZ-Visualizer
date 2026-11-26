@@ -1,0 +1,27 @@
+Copyright (c) Bruno Bordas. All Rights Reserved.
+
+1. OWNERSHIP & PROHIBITION OF UNAUTHORIZED MODIFICATION
+This software application (KML / KMZ Timeline Visualizer), including its source
+code, user interface, algorithms, and bundled documentation, is the proprietary
+work of Bruno Bordas.
+
+2. DISCLAIMER OF WARRANTY & REFUSAL OF LIABILITY
+This software is provided strictly "AS IS", without warranty of any kind,
+express or implied, including but not limited to warranties of accuracy, fitness
+for a particular purpose, or reliability.
+
+Refusal of Liability:
+In no event shall Bruno Bordas be held liable or responsible for any claim,
+damages, data loss, interpretation errors, or any other direct, indirect,
+incidental, or consequential issues arising out of or in connection with the use
+or performance of this software. Users assume full responsibility for verifying
+any output against original data.
+
+3. THIRD-PARTY MAP DATA & LIBRARY ATTRIBUTIONS
+- Online Street Map Data: © OpenStreetMap contributors under the Open Database
+  License (ODbL), rendered via OpenStreetMap France.
+- Online Satellite Imagery: © Esri World Imagery, Maxar, Earthstar Geographics.
+- Offline Vector World Map Data: Public domain Natural Earth datasets
+  (naturalearthdata.com).
+- Bundled Open-Source Frontend Libraries: MapLibre GL JS (BSD-3-Clause),
+  JSZip (MIT), and MP4-Muxer (MIT).

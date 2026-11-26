@@ -1,0 +1,20 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Build Temporary Files
+node_modules/
+npm-debug.log*
+*.log
+
+# Local Test KML / KMZ Files
+*.kml
+*.kmz
+

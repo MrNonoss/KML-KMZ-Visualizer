@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KML / KMZ Timeline Visualizer</title>
+
+  <!-- MapLibre GL JS for Map Rendering -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" crossorigin="anonymous" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" crossorigin="anonymous"></script>
+
+  <!-- JSZip for Client-Side .KMZ Archive Extraction -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" crossorigin="anonymous"></script>
+
+  <!-- MP4-Muxer for Hardware-Accelerated WebCodecs H.264 MP4 Export -->
+  <script src="https://unpkg.com/mp4-muxer@5.1.3/build/mp4-muxer.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Clean Top Toolbar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-badge">KML/KMZ</div>
+      <div>
+        <h1>Timeline Visualizer</h1>
+      </div>
+    </div>
+
+    <div class="toolbar-actions">
+      <!-- File Upload -->
+      <label class="btn btn-primary" for="fileInput" title="Load a .kml or .kmz file from disk">
+        <span>📂 Load KML / KMZ</span>
+        <input type="file" id="fileInput"
+          accept=".kml,.kmz,application/vnd.google-earth.kml+xml,application/vnd.google-earth.kmz" hidden />
+      </label>
+
+      <div class="divider"></div>
+
+      <!-- Single Consolidated Options Menu Button -->
+      <button id="btnOpenOptions" class="btn btn-secondary"
+        title="Configure Map Type, Camera, Timing, Gaps &amp; Dwell settings">
+        ⚙ Options
+      </button>
+
+      <!-- Export Video / GIF Trigger -->
+      <button id="btnOpenExport" class="btn btn-accent" disabled>
+        🎬 Export Video / GIF
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Workspace: Map Stage + Datapoint Inspector -->
+  <main class="workspace">
+    <!-- Center Map & HUD Composite Stage -->
+    <section class="stage-container" id="stageContainer">
+      <div id="mapViewport" class="map-viewport">
+        <!-- MapLibre GL Base Map mounts here -->
+        <div id="map"></div>
+        <!-- 2D Canvas for Trajectory Line, Point Markers, Labels & HUD -->
+        <canvas id="hudCanvas"></canvas>
+      </div>
+
+      <!-- Drag and Drop Overlay Prompt -->
+      <div id="dropZoneOverlay" class="drop-overlay hidden">
+        <div class="drop-box">
+          <div class="drop-icon">📍</div>
+          <h2>Drop KML or KMZ File Here</h2>
+          <p>Supports Cellebrite Physical Analyzer exports, TimeStamp/TimeSpan placemarks, and gx:Track files</p>
+        </div>
+      </div>
+
+      <!-- Single Interactive Bottom Playback Control Deck -->
+      <footer class="playback-deck">
+        <div class="transport-row">
+          <div class="transport-buttons">
+            <button id="btnRestart" class="btn-icon" title="Jump to First Fix (Home)" disabled>⏮</button>
+            <button id="btnPrevPoint" class="btn-icon" title="Previous Datapoint (Left Arrow)" disabled>⏪</button>
+            <button id="btnCacheTrip" class="btn-cache"
+              title="Pre-load all map tiles for the journey into RAM so playback has zero loading delay on big location jumps"
+              disabled>Cache</button>
+            <button id="btnPlayPause" class="btn-play" title="Play / Pause (Space)" disabled>▶ Play</button>
+            <button id="btnNextPoint" class="btn-icon" title="Next Datapoint (Right Arrow)" disabled>⏩</button>
+            <button id="btnFitBounds" class="btn-icon" title="Fit Entire Trajectory on Map" disabled>🗺</button>
+          </div>
+
+          <!-- Single Interactive Timeline Scrubber -->
+          <div class="scrubber-wrapper">
+            <input type="range" id="timelineSlider" min="0" max="1000" value="0" step="1" disabled />
+            <div class="scrubber-meta">
+              <span id="lblCurrentTime">No KML loaded</span>
+              <span id="lblPointProgress">Fix 0 / 0</span>
+              <span id="lblTotalSpan">—</span>
+            </div>
+          </div>
+
+          <!-- Quick Zoom Preset & Speed Multiplier -->
+          <div class="timing-controls">
+            <div class="control-group compact">
+              <label for="zoomPresetSelect">Zoom Level</label>
+              <select id="zoomPresetSelect">
+                <option value="18.2">Drone / Exact</option>
+                <option value="16.5" selected>Street (Precise)</option>
+                <option value="12">City</option>
+                <option value="9">County</option>
+                <option value="6.5">Region</option>
+                <option value="4.5">Country</option>
+              </select>
+            </div>
+
+            <div class="control-group compact">
+              <label for="speedSelect">Speed</label>
+              <select id="speedSelect">
+                <option value="0.5">0.5x (Slow)</option>
+                <option value="1" selected>1.0x (Normal)</option>
+                <option value="2">2.0x (Fast)</option>
+                <option value="4">4.0x (Faster)</option>
+                <option value="10">10x (Rapid)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Right Sidebar: Datapoint & Dwell Inspector -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Track Log</h2>
+        <span id="badgeSummary" class="badge">0 fixes</span>
+      </div>
+
+      <!-- Summary Telemetry Stats -->
+      <div class="telemetry-grid">
+        <div class="stat-card">
+          <span class="stat-label">Total Distance</span>
+          <span class="stat-value" id="statDistance">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Time Span</span>
+          <span class="stat-value" id="statDuration">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Dwell Clusters</span>
+          <span class="stat-value" id="statDwells">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Time Gaps (&gt;Thr)</span>
+          <span class="stat-value" id="statGaps">—</span>
+        </div>
+      </div>
+
+      <!-- Filter Search Input -->
+      <div class="sidebar-filter">
+        <input type="text" id="pointSearchInput" placeholder="Filter by timestamp, coordinates, or description..." />
+      </div>
+
+      <!-- Scrollable List of KML Fixes -->
+      <div id="pointListContainer" class="point-list">
+        <div class="empty-state">
+          Load a <code>.kml</code> or <code>.kmz</code> file to inspect and play back location fixes.
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Consolidated Options Modal -->
+  <div id="optionsModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>⚙ Visualizer Options</h2>
+        <button id="btnCloseOptions" class="btn-close" title="Close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="options-section-title">1. Map &amp; Camera Behavior</div>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="basemapSelect">Map Type</label>
+            <select id="basemapSelect">
+              <option value="local_dark" selected>⚡ Offline Map (Regional Vector)</option>
+              <option value="streets">🗺 OpenStreetMap (Online: Streets &amp; Buildings)</option>
+              <option value="satellite">🛰 ArcGIS (Online: Aerial Terrain)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="cameraModeSelect">Camera Framing</label>
+            <select id="cameraModeSelect">
+              <option value="follow" selected>Follow Active Fix</option>
+              <option value="overview">Global Overview</option>
+              <option value="manual">Free Camera</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="options-section-title">2. Timeline &amp; Gaps</div>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="timingModeSelect">Playback Timing Mode</label>
+            <select id="timingModeSelect">
+              <option value="smart" selected>Smart Gap-Compression (Recommended)</option>
+              <option value="sequential">Point-to-Point Sequential</option>
+              <option value="linear">Strict Linear Clock</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="tzModeSelect">Timestamp Timezone</label>
+            <select id="tzModeSelect">
+              <option value="source" selected>Preserve Source KML Offset (e.g. UTC+2)</option>
+              <option value="utc">Convert to UTC (Z)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="gapThresholdSelect">Time Gap Fast-Forward Threshold</label>
+            <select id="gapThresholdSelect">
+              <option value="1800">30 Minutes</option>
+              <option value="3600" selected>1 Hour</option>
+              <option value="14400">4 Hours</option>
+              <option value="43200">12 Hours</option>
+              <option value="86400">24 Hours</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="dwellRadiusSelect">Stationary Dwell Grouping Radius</label>
+            <select id="dwellRadiusSelect">
+              <option value="0">0 Meters</option>
+              <option value="15">15 Meters</option>
+              <option value="30" selected>30 Meters</option>
+              <option value="75">75 Meters</option>
+              <option value="150">150 Meters</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="info-banner">
+          <div><strong>Light Offline Map Status:</strong> Preloaded in the project memory (242 countries, 2,438 cities).
+          </div>
+          <div class="info-sub">To update the on-disk local map, run <code>update_local_map.bat</code> in
+            the project folder, while connected to the internet.</div>
+        </div>
+      </div>
+
+      <div class="modal-footer options-footer">
+        <button id="btnOpenLicence" class="btn btn-secondary"
+          title="View software licence, author copyright, and liability disclaimer">
+          📜 Licence
+        </button>
+        <div class="footer-right-btns">
+          <button id="btnResetOptions" class="btn btn-secondary">Reset Defaults</button>
+          <button id="btnApplyOptions" class="btn btn-primary">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Licence & Legal Notice Info Modal / Page -->
+  <div id="licenceModal" class="modal-backdrop hidden">
+    <div class="modal-card licence-card">
+      <div class="modal-header">
+        <h2>📜 Software Licence &amp; Legal Notice</h2>
+        <button id="btnCloseLicence" class="btn-close" title="Close">&times;</button>
+      </div>
+
+      <div class="modal-body licence-body">
+        <div class="licence-author-banner">
+          <div class="licence-badge">©</div>
+          <div>
+            <h3>Created by Bruno Bordas</h3>
+            <p>Copyright &copy; Bruno Bordas. All Rights Reserved.</p>
+          </div>
+        </div>
+
+        <div class="licence-block">
+          <h4>1. Ownership &amp; Prohibition of Unauthorized Modification</h4>
+          <p>
+            This software application (<strong>KML / KMZ Timeline Visualizer</strong>), including its source code, user
+            interface, algorithms, and bundled documentation, is the proprietary work of <strong>Bruno Bordas</strong>.
+          </p>
+        </div>
+
+        <div class="licence-block warning">
+          <h4>2. Disclaimer of Warranty &amp; Refusal of Liability</h4>
+          <p>
+            This software is provided strictly <strong>"AS IS"</strong>, without warranty of any kind, express or
+            implied, including but not limited to warranties of accuracy, fitness for a particular purpose, or
+            reliability.
+          </p>
+          <p>
+            <strong>Refusal of Liability:</strong> In no event shall <strong>Bruno Bordas</strong> be held liable or
+            responsible for any claim, damages, data loss, interpretation errors, or any other direct, indirect,
+            incidental, or consequential issues arising out of or in connection with the use or performance of this
+            software. Users assume full responsibility for verifying any output against original data.
+          </p>
+        </div>
+
+        <div class="licence-block">
+          <h4>3. Map Data Attribution</h4>
+          <p>
+            Online street map tiles and data are provided by <strong>&copy; OpenStreetMap contributors</strong> under
+            the Open Database License (ODbL) and rendered via <strong>OpenStreetMap France</strong>. Satellite imagery
+            is provided by <strong>Esri World Imagery</strong>. Offline vector data is derived from public-domain
+            <strong>Natural Earth</strong> datasets.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnBackToOptions" class="btn btn-primary">Agreed and Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video & GIF Export Modal -->
+  <div id="exportModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>🎬 Export Trajectory Video / GIF</h2>
+        <button id="btnCloseExport" class="btn-close" title="Close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-desc">
+          Renders the entire trajectory deterministically frame-by-frame with the map.
+        </p>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="exportFormatSelect">Output Format</label>
+            <select id="exportFormatSelect">
+              <option value="mp4" selected>MP4 Video (H.264 / WebCodecs)</option>
+              <option value="webm">WebM Video (VP9 / High Quality)</option>
+              <option value="gif">Animated GIF (Universal Embed)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="exportResSelect">Resolution</label>
+            <select id="exportResSelect">
+              <option value="1280x720" selected>1280 &times; 720 (720p HD - Recommended)</option>
+              <option value="1920x1080">1920 &times; 1080 (1080p Full HD)</option>
+              <option value="960x540">960 &times; 540 (qHD - Fast / Compact GIF)</option>
+              <option value="800x450">800 &times; 450 (Lightweight GIF)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="exportFpsSelect">Frame Rate (FPS)</label>
+            <select id="exportFpsSelect">
+              <option value="12">12 FPS (Best for compact GIFs)</option>
+              <option value="20">20 FPS (Balanced)</option>
+              <option value="30" selected>30 FPS (Smooth Video)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Clip Length (Matched to Waypoints &amp; Speed)</label>
+            <div id="exportCalculatedDuration" class="calculated-duration-box">
+              Matched to waypoints &amp; speed
+            </div>
+          </div>
+        </div>
+
+        <!-- Export Progress Bar Section -->
+        <div id="exportProgressSection" class="export-progress hidden">
+          <div class="progress-header">
+            <span id="exportStatusText">Preparing deterministic renderer...</span>
+            <span id="exportPercentText">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="exportProgressBar" class="progress-bar-fill" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnCancelExport" class="btn btn-secondary">Cancel</button>
+        <button id="btnStartExport" class="btn btn-accent">⬇ Start Rendering &amp; Download</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/localWorldMap.js"></script>
+  <script src="js/kmlParser.js"></script>
+  <script src="js/timelineEngine.js"></script>
+  <script src="js/mapController.js"></script>
+  <script src="js/hudRenderer.js"></script>
+  <script src="js/exporter.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
