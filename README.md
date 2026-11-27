@@ -1,4 +1,4 @@
-# 📍 KML / KMZ Timeline Visualizer
+# <img src="media/icon.png" width="42" valign="middle" alt="KML / KMZ Timeline Visualizer Icon" /> KML / KMZ Timeline Visualizer
 
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-0284c7)
 ![Format](https://img.shields.io/badge/Input-KML%20%7C%20KMZ-10b981)

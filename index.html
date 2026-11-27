@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KML / KMZ Timeline Visualizer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect x='16' y='16' width='480' height='480' rx='108' fill='%230e1726' stroke='%23273652' stroke-width='12'/%3E%3Cpath d='M104 374 C135 280 195 345 232 256 C266 174 308 215 368 158' fill='none' stroke='%2338bdf8' stroke-width='22' stroke-linecap='round'/%3E%3Ccircle cx='104' cy='374' r='22' fill='%2310b981'/%3E%3Ccircle cx='232' cy='256' r='22' fill='%23fbbf24'/%3E%3Cpath d='M368 58 C332 58 304 86 304 122 C304 166 368 222 368 222 C368 222 432 166 432 122 C432 86 404 58 368 58 Z' fill='%23f97316' stroke='%23fff' stroke-width='10'/%3E%3Cpolygon points='356,101 356,143 392,122' fill='%23fff'/%3E%3Crect x='84' y='424' width='344' height='24' rx='12' fill='%231e293b'/%3E%3Crect x='92' y='429' width='236' height='14' rx='7' fill='%2338bdf8'/%3E%3Ccircle cx='328' cy='436' r='16' fill='%23fff'/%3E%3C/svg%3E" />
 
   <!-- MapLibre GL JS for Map Rendering -->
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" crossorigin="anonymous" />
@@ -23,9 +24,19 @@
   <!-- Clean Top Toolbar -->
   <header class="topbar">
     <div class="brand">
-      <div class="brand-badge">KML/KMZ</div>
+      <svg class="brand-icon" viewBox="0 0 512 512" width="36" height="36" aria-hidden="true">
+        <rect x="16" y="16" width="480" height="480" rx="108" fill="#131c2e" stroke="#38bdf8" stroke-width="16" />
+        <path d="M 104 374 C 135 280, 195 345, 232 256 C 266 174, 308 215, 368 158" fill="none" stroke="#38bdf8" stroke-width="24" stroke-linecap="round" />
+        <circle cx="104" cy="374" r="24" fill="#10b981" />
+        <circle cx="232" cy="256" r="24" fill="#fbbf24" />
+        <path d="M 368 52 C 328 52, 296 84, 296 124 C 296 172, 368 232, 368 232 C 368 232, 440 172, 440 124 C 440 84, 408 52, 368 52 Z" fill="#f97316" stroke="#ffffff" stroke-width="12" />
+        <polygon points="354,100 354,148 394,124" fill="#ffffff" />
+        <rect x="84" y="420" width="344" height="26" rx="13" fill="#090d16" stroke="#273652" stroke-width="6" />
+        <rect x="92" y="426" width="236" height="14" rx="7" fill="#38bdf8" />
+        <circle cx="328" cy="433" r="16" fill="#ffffff" />
+      </svg>
       <div>
-        <h1>Timeline Visualizer</h1>
+        <h1>KML / KMZ Timeline Visualizer</h1>
       </div>
     </div>
 
