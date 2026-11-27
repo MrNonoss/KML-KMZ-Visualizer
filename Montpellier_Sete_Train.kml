@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>25-Nov-26 3:10:00 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4819.HEIC - Gare de Montpellier-Saint-Roch)</p><p>25-Nov-26 3:10:00 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:10:00+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8806784,43.6047210</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:10:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_GARE_GRATUIT / cache_encryptedB.db)</p><p>25-Nov-26 3:10:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:10:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8806637,43.6047259</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:11:50 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - RtcLocation)</p><p>25-Nov-26 3:11:50 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:11:50+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8804853,43.6045148</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:12:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4820.HEIC - Boarding Platform Voie D)</p><p>25-Nov-26 3:12:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:12:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8804892,43.6045245</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:13:40 PM(UTC+1)</name>
+      <description><![CDATA[<p>Google Maps Timeline (gmm_storage.db)</p><p>25-Nov-26 3:13:40 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:13:40+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8802886,43.6043181</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:14:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:14:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:14:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8777655,43.6018440</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:14:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:14:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:14:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8771649,43.5970843</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:15:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:15:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:15:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8771060,43.5910257</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:15:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>Google Maps Navigation Cache (gmm_storage.db)</p><p>25-Nov-26 3:15:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:15:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8758000,43.5838688</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:16:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_WIFI_TER / Onboard Router)</p><p>25-Nov-26 3:16:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:16:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8713098,43.5760648</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:16:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:16:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:16:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8659756,43.5679861</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:17:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Cell Tower Triangulation (MCC 208 MNC 01 - Orange FR)</p><p>25-Nov-26 3:17:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:17:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8604820,43.5597160</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:17:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:17:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:17:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8546889,43.5509827</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:18:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>WhatsApp Image Attachment (/Media/WhatsApp Images/IMG-20261125-WA0011.jpg)</p><p>25-Nov-26 3:18:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:18:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8489401,43.5422653</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:18:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:18:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:18:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8429045,43.5336430</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:19:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:19:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:19:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8346170,43.5267071</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:19:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>Google Maps Navigation Cache (gmm_storage.db)</p><p>25-Nov-26 3:19:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:19:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8257313,43.5201673</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:20:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_WIFI_TER / Onboard Router)</p><p>25-Nov-26 3:20:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:20:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8168149,43.5136134</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:20:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:20:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:20:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8084101,43.5074008</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:21:20 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:21:20 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:21:20+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.8009156,43.5018936</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:21:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>System Location Harvest (Routine.db - Gare de Vic-Mireval)</p><p>25-Nov-26 3:21:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:21:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7975240,43.4992183</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:22:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_WIFI_TER / Onboard Router)</p><p>25-Nov-26 3:22:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:22:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7975345,43.4992217</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:22:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - RtcLocation)</p><p>25-Nov-26 3:22:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:22:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7972930,43.4990476</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:23:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:23:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:23:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7933178,43.4951620</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:23:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:23:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:23:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7889528,43.4897482</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:24:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4823.HEIC - Etang de Vic Lagoon View)</p><p>25-Nov-26 3:24:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:24:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7845096,43.4837763</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:24:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>Google Maps Navigation Cache (gmm_storage.db)</p><p>25-Nov-26 3:24:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:24:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7800966,43.4778132</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:25:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>Cell Tower Triangulation (MCC 208 MNC 10 - SFR)</p><p>25-Nov-26 3:25:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:25:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7756530,43.4718618</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:25:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:25:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:25:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7713857,43.4660959</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:26:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:26:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:26:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7672875,43.4605682</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:26:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>Snapchat Location History (com.toyopagroup.picaboo)</p><p>25-Nov-26 3:26:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:26:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7634750,43.4554551</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:27:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_WIFI_TER / Onboard Router)</p><p>25-Nov-26 3:27:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:27:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7607492,43.4507824</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:27:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:27:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:27:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7593897,43.4468093</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:28:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:28:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:28:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7579465,43.4445470</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:29:00 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4825.HEIC - Gare de Frontignan Stop)</p><p>25-Nov-26 3:29:00 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:29:00+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7566047,43.4438440</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:29:30 PM(UTC+1)</name>
+      <description><![CDATA[<p>System Location Harvest (Routine.db - Gare de Frontignan)</p><p>25-Nov-26 3:29:30 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:29:30+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7565947,43.4438483</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:30:00 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_WIFI_TER / Onboard Router)</p><p>25-Nov-26 3:30:00 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:30:00+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7563292,43.4436978</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:30:35 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:30:35 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:30:35+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7503844,43.4406023</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:31:10 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:31:10 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:31:10+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7433342,43.4369255</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:31:45 PM(UTC+1)</name>
+      <description><![CDATA[<p>Google Maps Navigation Cache (gmm_storage.db)</p><p>25-Nov-26 3:31:45 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:31:45+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7360478,43.4331098</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:32:20 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4828.HEIC - Etang de Thau Causeway)</p><p>25-Nov-26 3:32:20 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:32:20+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7287341,43.4293092</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:32:55 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:32:55 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:32:55+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7216969,43.4256251</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:33:30 PM(UTC+1)</name>
+      <description><![CDATA[<p>WhatsApp Image Attachment (/Media/WhatsApp Images/IMG-20261125-WA0016.jpg - Mont Saint-Clair View)</p><p>25-Nov-26 3:33:30 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:33:30+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7152192,43.4222446</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:34:05 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - Harvest)</p><p>25-Nov-26 3:34:05 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:34:05+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7095198,43.4192811</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:34:40 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_WIFI_TER / Onboard Router)</p><p>25-Nov-26 3:34:40 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:34:40+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7046626,43.4167297</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:35:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Google Maps Navigation Cache (gmm_storage.db)</p><p>25-Nov-26 3:35:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:35:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.7008747,43.4147648</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:35:50 PM(UTC+1)</name>
+      <description><![CDATA[<p>GPS Tracker in Proximity</p><p>25-Nov-26 3:35:50 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:35:50+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.6981599,43.4133457</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:36:25 PM(UTC+1)</name>
+      <description><![CDATA[<p>System Location Harvest (Routine.db - Gare de Sète Arrival)</p><p>25-Nov-26 3:36:25 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:36:25+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.6968187,43.4126409</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:37:15 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4831.HEIC - Gare de Sète Platform)</p><p>25-Nov-26 3:37:15 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:37:15+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.6968103,43.4126467</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:38:10 PM(UTC+1)</name>
+      <description><![CDATA[<p>Wi-Fi Access Point (SNCF_GARE_GRATUIT / Gare de Sète)</p><p>25-Nov-26 3:38:10 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:38:10+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.6968124,43.4126367</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:39:05 PM(UTC+1)</name>
+      <description><![CDATA[<p>Apple Locationd Cache (cache_encryptedB.db - RtcLocation)</p><p>25-Nov-26 3:39:05 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:39:05+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.6968221,43.4126461</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>25-Nov-26 3:40:00 PM(UTC+1)</name>
+      <description><![CDATA[<p>Media Location - EXIF (/DCIM/100APPLE/IMG_4832.HEIC - Gare de Sète Exit)</p><p>25-Nov-26 3:40:00 PM(UTC+1)</p>]]></description>
+      <TimeStamp>
+        <when>2026-11-25T15:40:00+01:00</when>
+      </TimeStamp>
+      <Point>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <coordinates>3.6968066,43.4126427</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
